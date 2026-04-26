@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-agroconnect-change-in-production-2024')
 DEBUG      = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',') + ['.onrender.com', '.vercel.app', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
@@ -111,7 +111,6 @@ TEMPLATES = [{
     'OPTIONS': {'context_processors': ['django.template.context_processors.request']},
 }]
 
-APPEND_SLASH = False
 LANGUAGE_CODE = 'fr-fr'
 TIME_ZONE     = 'Africa/Dakar'
 USE_I18N      = True
