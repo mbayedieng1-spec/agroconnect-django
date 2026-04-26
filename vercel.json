@@ -1,1 +1,1 @@
-﻿{"builds":[{"src":"agroconnect/wsgi.py","use":"@vercel/python"}],"routes":[{"src":"/(.*)","dest":"agroconnect/wsgi.py"}]}
+﻿{"builds":[{"src":"backend_django/wsgi.py","use":"@vercel/python"}],"routes":[{"src":"/(.*)","dest":"backend_django/wsgi.py"}]}
